@@ -1,0 +1,38 @@
+{
+  "name": "groundctrl",
+  "version": "1.0.0",
+  "description": "A modular WordPress starter theme powered by Bootstrap 5 and Grunt",
+  "author": "Tim Green",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tim-green/groundctrl-wp-framework"
+  },
+  "scripts": {
+    "watch": "grunt watch"
+  },
+  "dependencies": {
+    "aos": "^2.3.4",
+    "grunt-contrib-clean": "^2.0.0",
+    "grunt-contrib-sass": "^2.0.0",
+    "livereload": "^0.9.3"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.2",
+    "bootstrap": "5.1.3",
+    "cssnano": "^5.0.17",
+    "grunt": "^1.4.1",
+    "grunt-browser-sync": "^2.2.0",
+    "grunt-contrib-imagemin": "^4.0.0",
+    "grunt-contrib-jshint": "^3.2.0",
+    "grunt-contrib-uglify": "^5.0.1",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-postcss": "^0.9.0",
+    "grunt-sass": "^3.1.0",
+    "jquery": ">=3.6.0",
+    "load-grunt-tasks": "^5.1.0",
+    "node-sass": "^7.0.1",
+    "pixrem": "^5.0.0",
+    "popper.js": "^1.16.1",
+    "postcss": "^8.4.6"
+  }
+}

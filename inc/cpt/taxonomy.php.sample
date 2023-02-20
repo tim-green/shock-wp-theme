@@ -1,0 +1,92 @@
+<?php
+
+/**
+ * Custom Taxonomy Sample
+ *  
+ * GroundCTRL Framework
+ * https://developer.wordpress.org/reference/functions/register_taxonomy/
+ * https://generatewp.com/taxonomy/
+ * 
+ */
+
+if ( ! function_exists('grnd_tax_sample') ) {
+
+    function grnd_tax_sample() { 
+        
+        $slug = 'tax-sample';
+
+        $objects = array(
+            // 'post',
+            // 'page',
+        );
+        
+        $args = array(
+
+            // Labels
+
+            'labels'                     => array(
+                'name'                       => _x( 'Custom Taxonomy Samples', 'Taxonomy General Name', 'groundctrl' ),
+                'singular_name'              => _x( 'Custom Taxonomy Sample', 'Taxonomy Singular Name', 'groundctrl' ),
+                // 'menu_name'                  => __( 'Taxonomy', 'groundctrl' ),
+                // 'all_items'                  => __( 'All Items', 'groundctrl' ),
+                // 'parent_item'                => __( 'Parent Item', 'groundctrl' ),
+                // 'parent_item_colon'          => __( 'Parent Item:', 'groundctrl' ),
+                // 'new_item_name'              => __( 'New Item Name', 'groundctrl' ),
+                // 'add_new_item'               => __( 'Add New Item', 'groundctrl' ),
+                // 'edit_item'                  => __( 'Edit Item', 'groundctrl' ),
+                // 'update_item'                => __( 'Update Item', 'groundctrl' ),
+                // 'view_item'                  => __( 'View Item', 'groundctrl' ),
+                // 'separate_items_with_commas' => __( 'Separate items with commas', 'groundctrl' ),
+                // 'add_or_remove_items'        => __( 'Add or remove items', 'groundctrl' ),
+                // 'choose_from_most_used'      => __( 'Choose from the most used', 'groundctrl' ),
+                // 'popular_items'              => __( 'Popular Items', 'groundctrl' ),
+                // 'search_items'               => __( 'Search Items', 'groundctrl' ),
+                // 'not_found'                  => __( 'Not Found', 'groundctrl' ),
+                // 'no_terms'                   => __( 'No items', 'groundctrl' ),
+                // 'items_list'                 => __( 'Items list', 'groundctrl' ),
+                // 'items_list_navigation'      => __( 'Items list navigation', 'groundctrl' ),
+            ),
+
+            // Options
+
+            'public'                => true,
+            'publicly_queryable'    => true,
+            'hierarchical'          => true,		
+            'rewrite'               => array(
+                'slug'          => $slug,
+                // 'with_front'    => true,
+                // 'hierarchical'  => false,
+            ),
+
+            // Admin UI
+
+            'show_ui'               => true,
+            'show_admin_column'     => false,
+            'show_in_nav_menus'     => true,
+            'show_tagcloud'         => true,
+            'show_in_quick_edit'    => true,
+            
+            // Capabilities
+
+            // 'capabilities'  => array(
+            //     'manage_terms'  => 'manage_categories',
+            //     'edit_terms'    => 'manage_categories',
+            //     'delete_terms'  => 'manage_categories',
+            //     'assign_terms'  => 'edit_posts',
+            // ),
+
+            // REST API
+
+            'show_in_rest'          => true,
+            // 'rest_base'             => $slug,
+            // 'rest_controller_class' => 'WP_REST_Terms_Controller',
+            
+        );
+
+        register_taxonomy( $slug, $objects, $args);
+
+    }
+
+    add_action('init', 'grnd_tax_sample');
+
+}
