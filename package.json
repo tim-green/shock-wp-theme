@@ -32,7 +32,7 @@
     "load-grunt-tasks": "^5.1.0",
     "node-sass": "^7.0.1",
     "pixrem": "^5.0.0",
-    "postcss": "^8.4.6"
+    "postcss": "^8.4.6",
     "tailwindcss": "^3.2.7"
   }
 }
