@@ -36,6 +36,11 @@ if (count($events) < 3) {
 
             <div class="shock-event-wrapper text-center p-4 pb-1 bg-primary rounded-sm shadow-md border-b-2 border-b-secondary text-secondary">
                 <p class="shock-event-details">
+                    <?php 
+                    echo tribe_get_start_date($event->ID,$display_time = false, $date_format = "d.m");
+
+                    echo (tribe_get_venue($event->ID) != "" && tribe_get_venue($event->ID) != NULL) ? " | " . tribe_get_venue( $event->ID) : "";
+                    ?>
                 </p>
 
                 <h3 class="shock-event-title text-6xl nobg mb-0">
