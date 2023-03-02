@@ -24,4 +24,19 @@ if (count($events) < 3) {
 }
 ?>
 <div class="shock-events-wrapper">
+    <div class="shock-events-outer container flex flex-col gap-5">
+            <div class="shock-event-wrapper text-center p-4 pb-1 bg-primary rounded-sm shadow-md border-b-2 border-b-secondary text-secondary">
+                <p class="shock-event-details">
+                </p>
+
+                <h3 class="shock-event-title text-6xl nobg mb-0">
+                </h3>
+                <div class="shock-event-description-wrapper max-h-0 overflow-hiddent transition-all duration-500 ease-in-out">
+                    <p class="shock-event-description max-w-lg mx-auto pt-4">
+                    </p>
+                </div>
+                <div class="shock-event-more-button flex w-fit mx-auto transition-transform duration-500 ease-in-out">
+                </div>
+            </div>
+    </div>
 </div>
