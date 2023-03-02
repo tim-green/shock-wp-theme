@@ -25,6 +25,15 @@ if (count($events) < 3) {
 ?>
 <div class="shock-events-wrapper">
     <div class="shock-events-outer container flex flex-col gap-5">
+        <?php 
+           foreach($events as $event) :
+            if (get_field("external", $event->ID) != "" && in_array("external", get_field("external", $event->ID))) {
+                $event_link = get_field("external_link", $event->ID);
+            } else {
+                $event_link = get_permalink($event->ID);
+            }
+            ?>
+
             <div class="shock-event-wrapper text-center p-4 pb-1 bg-primary rounded-sm shadow-md border-b-2 border-b-secondary text-secondary">
                 <p class="shock-event-details">
                 </p>
