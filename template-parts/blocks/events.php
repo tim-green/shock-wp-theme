@@ -47,6 +47,7 @@ if (count($events) < 3) {
                 </h3>
                 <div class="shock-event-description-wrapper max-h-0 overflow-hiddent transition-all duration-500 ease-in-out">
                     <p class="shock-event-description max-w-lg mx-auto pt-4">
+                        <?php echo get_the_excerpt($event->ID) ?>
                     </p>
                 </div>
                 <div class="shock-event-more-button flex w-fit mx-auto transition-transform duration-500 ease-in-out">
