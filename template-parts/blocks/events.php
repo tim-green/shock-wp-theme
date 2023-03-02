@@ -23,6 +23,7 @@ if (count($events) < 3) {
     $events = array_merge($events, $events_bydate);
 }
 ?>
+
 <div class="shock-events-wrapper">
     <div class="shock-events-outer container flex flex-col gap-5">
         <?php 
@@ -46,6 +47,7 @@ if (count($events) < 3) {
                 <h3 class="shock-event-title text-6xl nobg mb-0">
                     <a class="shock-noline" href="<?php echo $event_link ?>"><?php echo $event->post_title ?> </a>
                 </h3>
+
                 <div class="shock-event-description-wrapper max-h-0 overflow-hiddent transition-all duration-500 ease-in-out">
                     <p class="shock-event-description max-w-lg mx-auto pt-4">
                         <?php echo get_the_excerpt($event->ID) ?>
@@ -59,3 +61,5 @@ if (count($events) < 3) {
             </div>
     </div>
 </div>
+
+<?php endforeach; ?>
