@@ -37,7 +37,7 @@
                         <?php echo get_the_excerpt($project->ID); ?>
                     </div>
 
-                    <a href="<?php $project_link?>" class="shock-project-link block w-fit mt-3 <?php $target ?>">learn more</a>
+                    <a href="<?php echo $project_link?>" class="shock-project-link block w-fit mt-3 <?php echo $target ?>">learn more</a>
 
                 </div>
         </div>
