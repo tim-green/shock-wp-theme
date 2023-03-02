@@ -20,7 +20,11 @@ $the_query = new WP_Query(array(
         "subtitle" => get_field("subtitle"),
         "featured_image" => get_the_post_thumbnail_url()
     ));
-?><main class="md-container" id="shock-main-page-content">
+?>
+
 <main class="md-container" id="shock-main-page-content">
     <div class="shock-content-container">
-    </div>    </main>
+        <?php the_content(); ?>
+    </div>
+    
+</main>
