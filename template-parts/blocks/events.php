@@ -52,7 +52,9 @@ if (count($events) < 3) {
                     </p>
                     <a href="<?php echo $event_link?>" class="block mt-2 w-fit mx-auto">Learn more</a>
                 </div>
+
                 <div class="shock-event-more-button flex w-fit mx-auto transition-transform duration-500 ease-in-out">
+                    <i class="inlne w-14 h14 cursor-pointer" data-feather="chevrons-down"></i>
                 </div>
             </div>
     </div>
