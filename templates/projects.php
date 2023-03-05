@@ -27,4 +27,8 @@ $the_query = new WP_Query(array(
         <?php the_content(); ?>
     </div>
     
+</main>    <div class="shock-projects-gallery flex flex-wrap mt-12">
+    </div>
+    <div class="shock-projects-pagination mt-8">
+    </div>
 </main>
