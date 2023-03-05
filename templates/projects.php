@@ -26,8 +26,15 @@ $the_query = new WP_Query(array(
     <div class="shock-content-container">
         <?php the_content(); ?>
     </div>
-    
-</main>    <div class="shock-projects-gallery flex flex-wrap mt-12">
+
+    <!-- project gallery -->
+    <div class="shock-projects-gallery flex flex-wrap mt-12">
+    <?php
+        foreach($projects as $project) :
+            get_template_part("template-parts/elements/project-card", "", array("project"=> $project)
+        );
+        endforeach;
+    ?>
     </div>
     <div class="shock-projects-pagination mt-8">
     </div>
