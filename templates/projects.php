@@ -32,3 +32,4 @@ $the_query = new WP_Query(array(
     <div class="shock-projects-pagination mt-8">
     </div>
 </main>
+<?php     get_footer();?>
