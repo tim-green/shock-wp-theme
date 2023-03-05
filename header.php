@@ -9,6 +9,12 @@
 	<?php wp_head(); ?>
 </head>
 
+<?php 
+	if(!isset($args["navbar"])){
+		get_template_part("template_parts/elements/navbar", "", array("isFrontpage" => is_frontpage()));
+	}
+?>
+
 <body <?php body_class(); ?>> 
 <?php wp_body_open(); ?>
 
