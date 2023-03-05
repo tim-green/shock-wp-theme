@@ -33,6 +33,9 @@ require_once get_template_directory() . '/inc/global.php';
 /* ACF integration */
 require_once get_template_directory() . '/inc/integrations/acf.php'; 
 
+/* Blocks */
+require_once get_template_directory() . '/inc/blocks.php'; 
+
 /* Contact Form 7 integration */
 // require_once get_template_directory() . '/inc/integrations/cf7.php'; 
 
