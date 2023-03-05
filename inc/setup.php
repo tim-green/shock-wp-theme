@@ -8,20 +8,33 @@ if ( ! function_exists( 'grnd_setup_theme' ) ) {
 
 	function grnd_setup_theme() {
 
-		// Enable featured images
-		add_theme_support( 'post-thumbnails' );
-
-		// Enable theme logo
-		add_theme_support(
-			'custom-logo',
+		add_theme_support('title-tag');
+		add_theme_support('post-thumbnails');
+		add_theme_support('editor-styles');
+		add_editor_style('assets/build/app.min.css' );
+		add_editor_style('gutenberg/fixes.css' );
+		add_theme_support( 'editor-color-palette', array(
 			array(
-				'height'      => 100,
-				'width'       => 400,
-				'flex-height' => true,
-				'flex-width'  => true,
-				'header-text' => array( 'site-title', 'site-description' ),
-			)
-		);
+				'name' => __( 'Primary', 'themeLangDomain' ),
+				'slug' => 'primary',
+				'color' => '#FFE700',
+			),
+			array(
+				'name' => __( 'Secondary', 'themeLangDomain' ),
+				'slug' => 'secondary',
+				'color' => '#B5003A',
+			),
+			array(
+				'name' => __( 'Black', 'themeLangDomain' ),
+				'slug' => 'black',
+				'color' => "#000000",
+			),
+			array(
+				'name' => __( 'White', 'themeLangDomain' ),
+				'slug' => 'white',
+				'color' => "#ffffff",
+			),
+		));
 
 		// Enable RSS feeds
 		add_theme_support( 'automatic-feed-links' );
