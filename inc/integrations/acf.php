@@ -63,3 +63,44 @@ function grnd_wrap_blocks($block_content, $block){
 
         return $block_content;
 }
+
+add_action('acf/init', 'grnd_blocktypes');
+
+function grnd_blocktypes(){
+    //check if the function exists
+    if( function_exists('acf_register_block_type')){
+        acf_register_block_type(array(
+            'name'              => 'hero',
+            'title'             => __('Frontpage Hero'),
+            'description'       => __('Hero to be positioned on the frontpage'),
+            'render_template'   => 'template-parts/blocks/hero.php',
+            'category'          => 'shock',
+            'icon'              => '',
+            'keywords'          => array( 'hero', 'frontpage' ),
+            "supports"          => array(
+                "anchor" => true
+            )
+        ));
+
+        acf_register_block_type(array(
+            'name'              => 'events',
+            'title'             => __('Frontpage Event'),
+            'description'       => __('Event list to be positioned on the frontpage'),
+            'render_template'   => 'template-parts/blocks/events.php',
+            'category'          => 'shock',
+            'icon'              => '',
+            'keywords'          => array( 'events', 'frontpage' ),
+        ));
+
+        acf_register_block_type(array(
+            'name'              => 'projects',
+            'title'             => __('Frontpage Project'),
+            'description'       => __('List of Projects to be positioned on the frontpage'),
+            'render_template'   => 'template-parts/blocks/projects.php',
+            'category'          => 'shock',
+            'icon'              => '',
+            'keywords'          => array( 'projects', 'frontpage' ),
+        ));
+
+    }
+}
