@@ -42,3 +42,24 @@ function grnd_acf(){
 }
 
 grnd_acf();
+
+add_filter('render_block', 'grnd_wrap_blocks', 10, 2);
+
+function grnd_wrap_blocks($block_content, $block){
+
+    $skip =[
+        "core/column"
+    ];
+
+    if (strpos($block["blockName"], "core/" !==
+        false && in_array($block["blockName"], $skip)
+        )){
+            if(is_front_page()){
+                $block_content = "<div class='fp-container mx-auto' data-block-name='{$block["blockName"]}'>". $block_content ."</div>";
+            } else{
+                $block_content = "<div class='sm-container mx-auto' data-block-name='{$block["blockName"]}'>". $block_content . "</div>";
+            }
+        }
+
+        return $block_content;
+}
