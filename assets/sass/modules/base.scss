@@ -13,6 +13,12 @@ html {
 
 // Flex classes on #site-wrapper and #page-wrapper (header.php) are used to force full height on pages with little content
 // Layout fix when logged in and admin bar is present
+// Containers
+.container-lg{
+  width: calc(100% - 2 * 4rem);
+  max-width: 1920px;
+    margin-left: auto;
+    margin-right: auto;
 
 .admin-bar #site-wrapper,
 .admin-bar #header-wrapper {
@@ -24,6 +30,12 @@ html {
   color: $light;
   background-color: tint-color($secondary, 15%);
 }
+.container,
+.md-container {
+    width: calc(100% - 2 * 4rem);
+    max-width: 1380px;
+    margin-left: auto;
+    margin-right: auto;
 
 // Utility class to use img tag as a background
 .has-img-background {
@@ -40,4 +52,8 @@ html {
     height: 100%;
     object-fit: cover;
   }
+    @media (max-width: 780px) {
+        width: calc(100% - 2 * 1rem);
+    }
 }
+.shock-content-container{  max-width: 798px;}.shock-content-container{  max-width: 798px;}
