@@ -1,0 +1,19 @@
+/*
+
+  Block - Hero
+  +
+
+*/
+
+.shock-hero-wrapper{
+    @media (max-width:1080px){
+        .shock-hero-image{
+            display:none;
+        }
+
+        .shock-hero-section{
+            width:100%;
+            max-width: 580px
+        }
+    }
+}
