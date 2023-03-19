@@ -10,9 +10,7 @@
 </head>
 
 <?php 
-	if(!isset($args["navbar"])){
-		get_template_part("template_parts/elements/navbar", "", array("isFrontpage" => is_frontpage()));
-	}
+	get_template_part("template_parts/elements/navbar");
 ?>
 
 <body <?php body_class(); ?>> 
