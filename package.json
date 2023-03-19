@@ -11,11 +11,13 @@
     "watch": "grunt watch"
   },
   "dependencies": {
-    "aos": "^2.3.4",
     "fast-glob": "^3.2.12",
+    "feather-icons": "^4.29.0",
     "grunt-contrib-clean": "^2.0.0",
     "grunt-contrib-sass": "^2.0.0",
-    "livereload": "^0.9.3"
+    "livereload": "^0.9.3",
+    "@kollektiv-kpunkt/simpleicons-replacer": "^1.0.4",
+    "masonry-layout": "^4.2.2"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.13",
