@@ -43,7 +43,7 @@ require_once get_template_directory() . '/inc/blocks.php';
 // require_once get_template_directory() . '/inc/searchfilter.php'; 
 
 /* Cleanup */
-require_once get_template_directory() . '/inc/cleanup.php'; 
+//require_once get_template_directory() . '/inc/cleanup.php'; 
 
 /* Custom user functions */
 require_once get_template_directory() . '/inc/custom.php'; 
